@@ -28,9 +28,6 @@ func update_bitmap(_debug: bool, hack: bool):
 	for i in collision_polygons:
 		i.queue_free()
 		
-#	fix_bitmap(1, 1, $Sprite.texture.get_height()-1, $Sprite.texture.get_height()-1)
-
-
 	polygons = []
 	collision_polygons = []
 
@@ -68,7 +65,7 @@ func update_bitmap(_debug: bool, hack: bool):
 		collision_polygons.append(cp)
 
 #		call_deferred("add_child", cp)
-		add_child(cp) # Get error here
+		add_child(cp) # Get error here in the first iteration of the loop
 	pass
 	
 
